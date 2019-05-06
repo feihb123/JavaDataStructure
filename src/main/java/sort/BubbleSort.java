@@ -1,15 +1,16 @@
 package sort;
 
 public class BubbleSort {
-    public static void main(String[] args) {
-        int[] array={2,4,5,1,9,8,3,6,7};
+    public static void main(String[] args) throws InterruptedException {
+        int[] array={2,4,5,1,9,8,3,6,11};
         bubble(array);
         show(array);
     }
 
     public static void bubble(int[] a){
         for(int i=0;i<a.length-1;i++){
-            boolean flag = true;//flag为ture时已排序完成
+            //flag为ture时已排序完成
+            boolean flag = true;
             for(int j=0;j<a.length-i-1;j++){
                 if(a[j]>a[j+1]){
                     int temp = a[j+1];
